@@ -1,0 +1,2243 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/6/2025 11:37:12 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="MAY"
+  DTS:CreatorName="MAY\mabel"
+  DTS:DTSID="{5949B583-0976-4AE5-9456-521C9EF54B96}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="17418"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="60"
+  DTS:VersionGUID="{28A58848-9446-4D3F-8FB6-F1C0D769A4CB}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{354BFB89-94F1-4C78-B001-D3EA6672852F}"
+      DTS:ObjectName="Administrador de conexiones con Excel">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\mabel\Desktop\DesafioP1\Clientes_Frecuentes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{8237ECEE-4E84-459F-AE23-3E12D2071C42}"
+      DTS:ObjectName="Administrador de conexiones con Excel 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\mabel\Desktop\DesafioP1\Clientes_Ocasionales.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9C182F11-D820-4AA6-8037-35D174F28B86}"
+      DTS:ObjectName="Administrador de conexiones con Excel 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\mabel\Desktop\DesafioP1\Clientes_Frecuentes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{153A65FA-6EC1-4199-8616-33E7985F37BB}"
+      DTS:ObjectName="Administrador de conexiones con Excel 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\mabel\Desktop\DesafioP1\Clientes_Frecuentes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B154B36A-9D6D-420A-802F-5A66768AEAB7}"
+      DTS:ObjectName="Administrador de conexiones con Excel 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\mabel\Desktop\DesafioP1\Clientes_Ocasionales.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[MAY\SQLEXPRESS;TrustServerCertificate=True]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{4BA385C5-1868-46B3-B3C8-0DF9D7824C11}"
+      DTS:ObjectName="MAY\SQLEXPRESS;TrustServerCertificate=True">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=MAY\SQLEXPRESS;TrustServerCertificate=True;Integrated Security=True;Application Name=&quot;SSIS-Package-{4BA385C5-1868-46B3-B3C8-0DF9D7824C11}MAY\SQLEXPRESS;TrustServerCertificate=True&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\TechStore"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{04C01050-5133-4139-BDE6-6EC9ACEF584C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="TechStore"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\TechStore\Aggregate"
+              componentClassID="Microsoft.Aggregate"
+              contactInfo="Aggregate;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Aggregates data with functions such as Average, Sum, Count, Max, and Min. For example, group data to compute the sum of sales per product or the average visits per day."
+              name="Aggregate"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                  name="KeyScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                  name="Keys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the approximate number of distinct values in a column that the aggregation counts distinctly. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no CountDistinctScale value is used."
+                  name="CountDistinctScale"
+                  typeConverter="KeyScaleType">0</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the exact number of distinct values in a column that the aggregation counts distinctly. If a CountDistinctScale value is specified, the value in CountDistinctKeys takes precedence."
+                  name="CountDistinctKeys" />
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage by which memory can be extended during the aggregation. Valid values are between 1 and 100."
+                  name="AutoExtendFactor">25</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\TechStore\Aggregate.Inputs[Aggregate Input 1]"
+                  name="Aggregate Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Aggregate.Inputs[Aggregate Input 1].Columns[id_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_cliente"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_cliente]" />
+                    <inputColumn
+                      refId="Package\TechStore\Aggregate.Inputs[Aggregate Input 1].Columns[id_producto]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_producto"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_producto]" />
+                    <inputColumn
+                      refId="Package\TechStore\Aggregate.Inputs[Aggregate Input 1].Columns[cantidad_num]"
+                      cachedDataType="i4"
+                      cachedName="cantidad_num"
+                      lineageId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[cantidad_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Aggregate.Inputs[Aggregate Input 1].Columns[precio_num]"
+                      cachedDataType="numeric"
+                      cachedName="precio_num"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[precio_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Aggregate.Inputs[Aggregate Input 1].Columns[id_venta]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_venta"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_venta]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1]"
+                  name="Aggregate Output 1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the approximate number of group by keys that the aggregation produces. Low indicates 500,000 key values, Medium indicates 5 million key values, and High indicates more than 25 million key values. Unspecified indicates no KeyScale value is used."
+                      name="KeyScale"
+                      typeConverter="KeyScaleType">0</property>
+                    <property
+                      dataType="System.Null"
+                      description="Specifies the exact number of group by keys that the aggregation produces. If a KeyScale value is specified, the value in Keys takes precedence."
+                      name="Keys" />
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_cliente]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_cliente]"
+                      name="id_cliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_cliente]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_producto]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_producto]"
+                      name="id_producto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_producto]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[cantidad_num]"
+                      dataType="i8"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[cantidad_num]"
+                      name="cantidad_num">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[cantidad_num]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">4</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[precio_num]"
+                      dataType="numeric"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[precio_num]"
+                      name="precio_num"
+                      precision="18"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[precio_num]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_venta]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_venta]"
+                      name="id_venta">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_venta]}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
+                      dataType="ui8"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]"
+                      name="Count all">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the ID of the input column used in the aggregation."
+                          name="AggregationColumnId">#{Package\TechStore\0:invalid}</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the type of aggregation."
+                          name="AggregationType"
+                          typeConverter="AggregationType">2</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Indicates whether the column requires special handling because it may contain oversized data or it requires precision beyond a float data type."
+                          name="IsBig">1</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the string comparison options."
+                          name="AggregationComparisonFlags">0</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\CambioTipodedato"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="CambioTipodedato"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\TechStore\CambioTipodedato.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\CambioTipodedato.Inputs[Derived Column Input].Columns[cantidad]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="cantidad"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[cantidad]" />
+                    <inputColumn
+                      refId="Package\TechStore\CambioTipodedato.Inputs[Derived Column Input].Columns[precio]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="precio"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[precio]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\TechStore\CambioTipodedato.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[cantidad_num]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[cantidad_num]"
+                      name="cantidad_num"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_I4)#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[cantidad]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_I4)cantidad</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[precio_num]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output].Columns[precio_num]"
+                      name="precio_num"
+                      precision="18"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_NUMERIC,18,2)#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[precio]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_NUMERIC,18,2)precio</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\TechStore\CambioTipodedato.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Clientes"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Clientes"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [id_cliente], [nombre], [ciudad]
+FROM [Clientes].[dbo].[clientes];</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\TechStore\Clientes.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MAY\SQLEXPRESS;TrustServerCertificate=True]"
+                  connectionManagerRefId="Package.ConnectionManagers[MAY\SQLEXPRESS;TrustServerCertificate=True]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[id_cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].ExternalColumns[id_cliente]"
+                      length="50"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[id_cliente]"
+                      name="id_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[nombre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
+                      length="50"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[nombre]"
+                      name="nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[ciudad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].ExternalColumns[ciudad]"
+                      length="50"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[ciudad]"
+                      name="ciudad"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].ExternalColumns[id_cliente]"
+                      dataType="wstr"
+                      length="50"
+                      name="id_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
+                      dataType="wstr"
+                      length="50"
+                      name="nombre" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].ExternalColumns[ciudad]"
+                      dataType="wstr"
+                      length="50"
+                      name="ciudad" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[id_cliente]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[id_cliente]"
+                      name="id_cliente" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
+                      name="nombre" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[ciudad]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[ciudad]"
+                      name="ciudad" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Clientes_Frecuentes"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Clientes_Frecuentes"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Clientes_Frecuentes$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\TechStore\Clientes_Frecuentes.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 3]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[id_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_cliente"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[id_cliente]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_cliente]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[id_producto]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_producto"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[id_producto]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_producto]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[cantidad_num]"
+                      cachedDataType="i8"
+                      cachedName="cantidad_num"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[cantidad_num]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[cantidad_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[precio_num]"
+                      cachedDataType="numeric"
+                      cachedName="precio_num"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[precio_num]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[precio_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[id_venta]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_venta"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[id_venta]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_venta]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[Count all]"
+                      cachedDataType="ui8"
+                      cachedName="Count all"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[Count all]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[Totalventa]"
+                      cachedDataType="numeric"
+                      cachedName="Totalventa"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[Totalventa]"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[ClasificacionCliente]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="ClasificacionCliente"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[ClasificacionCliente]"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[ClasificacionCliente]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].Columns[CodigoPais]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CodigoPais"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[CodigoPais]"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[CodigoPais]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[id_cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[id_producto]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[cantidad_num]"
+                      dataType="wstr"
+                      length="255"
+                      name="cantidad_num" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[precio_num]"
+                      dataType="wstr"
+                      length="255"
+                      name="precio_num" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[id_venta]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_venta" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[Count all]"
+                      dataType="wstr"
+                      length="255"
+                      name="Count all" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[Totalventa]"
+                      dataType="wstr"
+                      length="255"
+                      name="Totalventa" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[ClasificacionCliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="ClasificacionCliente" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input].ExternalColumns[CodigoPais]"
+                      dataType="wstr"
+                      length="255"
+                      name="CodigoPais" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Clientes_Frecuentes.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Clientes_Frecuentes.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes_Frecuentes.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Clientes_Frecuentes.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Clientes_Ocasionales"
+              componentClassID="Microsoft.ExcelDestination"
+              contactInfo="Excel Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Excel Destination"
+              name="Clientes_Ocasionales"
+              usesDispositions="true">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Clientes_Ocasionales$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\TechStore\Clientes_Ocasionales.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Administrador de conexiones con Excel 4]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Excel Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[id_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_cliente"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[id_cliente]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_cliente]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[id_producto]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_producto"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[id_producto]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_producto]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[cantidad_num]"
+                      cachedDataType="i8"
+                      cachedName="cantidad_num"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[cantidad_num]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[cantidad_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[precio_num]"
+                      cachedDataType="numeric"
+                      cachedName="precio_num"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[precio_num]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[precio_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[id_venta]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_venta"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[id_venta]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_venta]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[Count all]"
+                      cachedDataType="ui8"
+                      cachedName="Count all"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[Count all]"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[Count all]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[Totalventa]"
+                      cachedDataType="numeric"
+                      cachedName="Totalventa"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[Totalventa]"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[ClasificacionCliente]"
+                      cachedDataType="wstr"
+                      cachedLength="9"
+                      cachedName="ClasificacionCliente"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[ClasificacionCliente]"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[ClasificacionCliente]" />
+                    <inputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].Columns[CodigoPais]"
+                      cachedDataType="wstr"
+                      cachedLength="2"
+                      cachedName="CodigoPais"
+                      externalMetadataColumnId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[CodigoPais]"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[CodigoPais]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[id_cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[id_producto]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[cantidad_num]"
+                      dataType="wstr"
+                      length="255"
+                      name="cantidad_num" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[precio_num]"
+                      dataType="wstr"
+                      length="255"
+                      name="precio_num" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[id_venta]"
+                      dataType="wstr"
+                      length="255"
+                      name="id_venta" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[Count all]"
+                      dataType="wstr"
+                      length="255"
+                      name="Count all" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[Totalventa]"
+                      dataType="wstr"
+                      length="255"
+                      name="Totalventa" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[ClasificacionCliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="ClasificacionCliente" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input].ExternalColumns[CodigoPais]"
+                      dataType="wstr"
+                      length="255"
+                      name="CodigoPais" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Clientes_Ocasionales.Outputs[Excel Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Excel Destination Error Output"
+                  synchronousInputId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Clientes_Ocasionales.Outputs[Excel Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\Clientes_Ocasionales.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Clientes_Ocasionales.Outputs[Excel Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\TechStore\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Conditional Split.Inputs[Conditional Split Input].Columns[Totalventa]"
+                      cachedDataType="numeric"
+                      cachedName="Totalventa"
+                      cachedPrecision="38"
+                      cachedScale="2"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Conditional Split.Outputs[Frecuentes]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Frecuentes"
+                  synchronousInputId="Package\TechStore\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]}) ? (0 &gt; 1000) : (#{Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]} &gt; 1000)</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Totalventa) ? (0 &gt; 1000) : (Totalventa &gt; 1000)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\TechStore\Conditional Split.Outputs[Ocasionales]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Ocasionales"
+                  synchronousInputId="Package\TechStore\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[ISNULL](#{Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]}) ?  FALSE  : (#{Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]} &lt;= 1000)</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">ISNULL(Totalventa) ?  FALSE  : (Totalventa &lt;= 1000)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\TechStore\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\TechStore\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\TechStore\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\TechStore\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Especificaciones"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Especificaciones"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\TechStore\Especificaciones.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Especificaciones.Inputs[Derived Column Input].Columns[cantidad_num]"
+                      cachedDataType="i8"
+                      cachedName="cantidad_num"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[cantidad_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Especificaciones.Inputs[Derived Column Input].Columns[precio_num]"
+                      cachedDataType="numeric"
+                      cachedName="precio_num"
+                      cachedPrecision="18"
+                      cachedScale="2"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[precio_num]" />
+                    <inputColumn
+                      refId="Package\TechStore\Especificaciones.Inputs[Derived Column Input].Columns[id_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_cliente"
+                      lineageId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_cliente]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Especificaciones.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\TechStore\Especificaciones.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[Totalventa]"
+                      name="Totalventa"
+                      precision="38"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[cantidad_num]} * #{Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[precio_num]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">cantidad_num * precio_num</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[ClasificacionCliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="9"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[ClasificacionCliente]"
+                      name="ClasificacionCliente"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[cantidad_num]} * #{Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[precio_num]} &gt; 1000 ? "Frecuente" : "Ocasional"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">cantidad_num * precio_num &gt; 1000 ? "Frecuente" : "Ocasional"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[CodigoPais]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="2"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Output].Columns[CodigoPais]"
+                      name="CodigoPais"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[SUBSTRING](#{Package\TechStore\Aggregate.Outputs[Aggregate Output 1].Columns[id_cliente]},1,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">SUBSTRING(id_cliente,1,2)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\TechStore\Especificaciones.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\TechStore\Especificaciones.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Especificaciones.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\Especificaciones.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Especificaciones.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Productos"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Productos"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [id_producto], [nombre], [precio]
+FROM [Productos].[dbo].[productos];</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\TechStore\Productos.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MAY\SQLEXPRESS;TrustServerCertificate=True]"
+                  connectionManagerRefId="Package.ConnectionManagers[MAY\SQLEXPRESS;TrustServerCertificate=True]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[id_producto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[id_producto]"
+                      length="50"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[id_producto]"
+                      name="id_producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[nombre]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
+                      length="50"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[nombre]"
+                      name="nombre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[precio]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[precio]"
+                      length="50"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[precio]"
+                      name="precio"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[id_producto]"
+                      dataType="wstr"
+                      length="50"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[nombre]"
+                      dataType="wstr"
+                      length="50"
+                      name="nombre" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[precio]"
+                      dataType="wstr"
+                      length="50"
+                      name="precio" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[id_producto]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[id_producto]"
+                      name="id_producto" />
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[nombre]"
+                      name="nombre" />
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[precio]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[precio]"
+                      name="precio" />
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\TechStore\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 1].Columns[id_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_cliente"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[id_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 1].Columns[nombre]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[nombre]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[nombre]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 1].Columns[ciudad]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="ciudad"
+                      lineageId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET].Columns[ciudad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[ciudad]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\TechStore\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 2].Columns[nombre]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="nombre"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[nombre]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[nombre]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 2].Columns[id_producto]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_producto"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[id_producto]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_producto]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 2].Columns[precio]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="precio"
+                      lineageId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET].Columns[precio]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[precio]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\TechStore\Union All.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 3].Columns[cantidad]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="cantidad"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[cantidad]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[cantidad]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 3].Columns[id_cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_cliente"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_cliente]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_cliente]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 3].Columns[id_producto]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_producto"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_producto]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_producto]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\TechStore\Union All.Inputs[Union All Input 3].Columns[id_venta]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="id_venta"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_venta]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_venta]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\TechStore\Union All.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_cliente]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_cliente]"
+                      name="id_cliente" />
+                    <outputColumn
+                      refId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[nombre]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[nombre]"
+                      name="nombre" />
+                    <outputColumn
+                      refId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[ciudad]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[ciudad]"
+                      name="ciudad" />
+                    <outputColumn
+                      refId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[cantidad]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[cantidad]"
+                      name="cantidad" />
+                    <outputColumn
+                      refId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_producto]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_producto]"
+                      name="id_producto" />
+                    <outputColumn
+                      refId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[precio]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[precio]"
+                      name="precio" />
+                    <outputColumn
+                      refId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_venta]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Union All.Outputs[Union All Output 1].Columns[id_venta]"
+                      name="id_venta" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\TechStore\Ventas1"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Ventas1"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [id_venta], [id_cliente], [id_producto], [cantidad]
+FROM [Ventas1].[dbo].[ventas];</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\TechStore\Ventas1.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[MAY\SQLEXPRESS;TrustServerCertificate=True]"
+                  connectionManagerRefId="Package.ConnectionManagers[MAY\SQLEXPRESS;TrustServerCertificate=True]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_venta]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_venta]"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_venta]"
+                      name="id_venta"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_cliente]"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_cliente]"
+                      name="id_cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_producto]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_producto]"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[id_producto]"
+                      name="id_producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[cantidad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[cantidad]"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].Columns[cantidad]"
+                      name="cantidad"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_venta]"
+                      dataType="wstr"
+                      length="50"
+                      name="id_venta" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_cliente]"
+                      dataType="wstr"
+                      length="50"
+                      name="id_cliente" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[id_producto]"
+                      dataType="wstr"
+                      length="50"
+                      name="id_producto" />
+                    <externalMetadataColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET].ExternalColumns[cantidad]"
+                      dataType="wstr"
+                      length="50"
+                      name="cantidad" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[id_venta]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[id_venta]"
+                      name="id_venta" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[id_cliente]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[id_cliente]"
+                      name="id_cliente" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[id_producto]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[id_producto]"
+                      name="id_producto" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[cantidad]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[cantidad]"
+                      name="cantidad" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\TechStore\Ventas1.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\TechStore.Paths[Aggregate Output 1]"
+              endId="Package\TechStore\Especificaciones.Inputs[Derived Column Input]"
+              name="Aggregate Output 1"
+              startId="Package\TechStore\Aggregate.Outputs[Aggregate Output 1]" />
+            <path
+              refId="Package\TechStore.Paths[Derived Column Output]"
+              endId="Package\TechStore\Aggregate.Inputs[Aggregate Input 1]"
+              name="Derived Column Output"
+              startId="Package\TechStore\CambioTipodedato.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\TechStore.Paths[Derived Column Output1]"
+              endId="Package\TechStore\Conditional Split.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\TechStore\Especificaciones.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\TechStore.Paths[Frecuentes]"
+              endId="Package\TechStore\Clientes_Frecuentes.Inputs[Excel Destination Input]"
+              name="Frecuentes"
+              startId="Package\TechStore\Conditional Split.Outputs[Frecuentes]" />
+            <path
+              refId="Package\TechStore.Paths[Ocasionales]"
+              endId="Package\TechStore\Clientes_Ocasionales.Inputs[Excel Destination Input]"
+              name="Ocasionales"
+              startId="Package\TechStore\Conditional Split.Outputs[Ocasionales]" />
+            <path
+              refId="Package\TechStore.Paths[Salida de origen de ADO NET]"
+              endId="Package\TechStore\Union All.Inputs[Union All Input 1]"
+              name="Salida de origen de ADO NET"
+              startId="Package\TechStore\Clientes.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\TechStore.Paths[Salida de origen de ADO NET1]"
+              endId="Package\TechStore\Union All.Inputs[Union All Input 2]"
+              name="Salida de origen de ADO NET"
+              startId="Package\TechStore\Productos.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\TechStore.Paths[Salida de origen de ADO NET2]"
+              endId="Package\TechStore\Union All.Inputs[Union All Input 3]"
+              name="Salida de origen de ADO NET"
+              startId="Package\TechStore\Ventas1.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\TechStore.Paths[Union All Output 1]"
+              endId="Package\TechStore\CambioTipodedato.Inputs[Derived Column Input]"
+              name="Union All Output 1"
+              startId="Package\TechStore\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\TechStore"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\TechStore">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\TechStore\Union All"
+          TopLeft="387.142857966982,118.52941166081" />
+        <NodeLayout
+          Size="116,41.6"
+          Id="Package\TechStore\Ventas1"
+          TopLeft="586.21428682275,13.50000004558" />
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\TechStore\Clientes_Frecuentes"
+          TopLeft="238.09523860208,578.627450473203" />
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\TechStore\Clientes_Ocasionales"
+          TopLeft="447.619048571911,577.352940670398" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\TechStore\Conditional Split"
+          TopLeft="366.666667447204,460.098038812393" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\TechStore\Especificaciones"
+          TopLeft="366.023810173835,345.323529133034" />
+        <NodeLayout
+          Size="115.2,41.6"
+          Id="Package\TechStore\Clientes"
+          TopLeft="216.928571878647,5.5" />
+        <NodeLayout
+          Size="166.4,41.6"
+          Id="Package\TechStore\CambioTipodedato"
+          TopLeft="369.238095724664,198.794117472224" />
+        <NodeLayout
+          Size="124.8,41.6"
+          Id="Package\TechStore\Productos"
+          TopLeft="393.357143618927,8.73529414110735" />
+        <NodeLayout
+          Size="126.4,41.6"
+          Id="Package\TechStore\Aggregate"
+          TopLeft="381.50000068297,279.049019425188" />
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Union All Output 1]"
+          TopLeft="449.790476845823,160.12941166081">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.6647058114135"
+              Start="0,0"
+              End="0,31.1647058114135">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.1647058114135" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Salida de origen de ADO NET2]"
+          TopLeft="644.21428682275,55.10000004558">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-169.071428855767,63.4294116152302"
+              Start="0,0"
+              End="-169.071428855767,55.9294116152302">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.3670075751501" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.3670075751501"
+                    Point2="0,41.3670075751501"
+                    Point3="-4,41.3670075751501" />
+                  <mssgle:LineSegment
+                    End="-165.071428855767,41.3670075751501" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-165.071428855767,41.3670075751501"
+                    Point2="-169.071428855767,41.3670075751501"
+                    Point3="-169.071428855767,45.3670075751501" />
+                  <mssgle:LineSegment
+                    End="-169.071428855767,55.9294116152302" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Salida de origen de ADO NET1]"
+          TopLeft="455.757143618927,50.3352941411074">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.61428565194427,68.1941175197029"
+              Start="0,0"
+              End="-8.61428565194427,60.6941175197029">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.0970587598514" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.0970587598514"
+                    Point2="0,34.0970587598514"
+                    Point3="-4,34.0970587598514" />
+                  <mssgle:LineSegment
+                    End="-4.61428565194427,34.0970587598514" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.61428565194427,34.0970587598514"
+                    Point2="-8.61428565194427,34.0970587598514"
+                    Point3="-8.61428565194427,38.0970587598514" />
+                  <mssgle:LineSegment
+                    End="-8.61428565194427,60.6941175197029" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Salida de origen de ADO NET]"
+          TopLeft="274.528571878647,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="144.614286088335,71.4294116608102"
+              Start="0,0"
+              End="144.614286088335,63.9294116608102">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5843989092241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,42.5843989092241"
+                    Point2="0,46.5843989092241"
+                    Point3="4,46.5843989092241" />
+                  <mssgle:LineSegment
+                    End="140.614286088335,46.5843989092241" />
+                  <mssgle:CubicBezierSegment
+                    Point1="140.614286088335,46.5843989092241"
+                    Point2="144.614286088335,46.5843989092241"
+                    Point3="144.614286088335,50.5843989092241" />
+                  <mssgle:LineSegment
+                    End="144.614286088335,63.9294116608102" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Ocasionales]"
+          TopLeft="468.266667447204,501.698038812393">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.7523811247072,75.6549018580058"
+              Start="0,0"
+              End="67.7523811247072,68.1549018580058">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.7275293700208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.7275293700208"
+                    Point2="0,30.7275293700208"
+                    Point3="4,30.7275293700208" />
+                  <mssgle:LineSegment
+                    End="63.7523811247072,30.7275293700208" />
+                  <mssgle:CubicBezierSegment
+                    Point1="63.7523811247072,30.7275293700208"
+                    Point2="67.7523811247072,30.7275293700208"
+                    Point3="67.7523811247072,34.7275293700208" />
+                  <mssgle:LineSegment
+                    End="67.7523811247072,68.1549018580058" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.1510929061036,35.7275293700208,53.4501953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Frecuentes]"
+          TopLeft="419.466667447204,501.698038812393">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-95.3714288451236,76.9294116608103"
+              Start="0,0"
+              End="-95.3714288451236,69.4294116608103">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,27.2451764283907" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,27.2451764283907"
+                    Point2="0,31.2451764283907"
+                    Point3="-4,31.2451764283907" />
+                  <mssgle:LineSegment
+                    End="-91.3714288451236,31.2451764283907" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-91.3714288451236,31.2451764283907"
+                    Point2="-95.3714288451236,31.2451764283907"
+                    Point3="-95.3714288451236,35.2451764283907" />
+                  <mssgle:LineSegment
+                    End="-95.3714288451236,69.4294116608103" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-72.3032925475618,36.2451764283907,49.23515625,9.421875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Derived Column Output1]"
+          TopLeft="443.345238810519,386.923529133034">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,73.1745096793586"
+              Start="0,0"
+              End="0,65.6745096793586">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.6745096793586" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Derived Column Output]"
+          TopLeft="448.569048203817,240.394117472224">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.6549019529642"
+              Start="0,0"
+              End="0,31.1549019529642">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.1549019529642" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\TechStore.Paths[Aggregate Output 1]"
+          TopLeft="443.761905428402,320.649019425188">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24.674509707846"
+              Start="0,0"
+              End="0,17.174509707846">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.174509707846" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\TechStore\Ventas1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\TechStore\Clientes_Frecuentes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\TechStore\Clientes_Ocasionales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\TechStore\Clientes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\TechStore\Productos">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
